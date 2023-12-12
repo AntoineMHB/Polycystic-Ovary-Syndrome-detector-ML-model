@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title style="color: #45a049;">PCOS DETECTOR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PCOS DETECTOR</h1>
+    <h2>Please fill this form</h2>
+   
+    <div class="container">
+        <form action="{% url 'result' %}" method="GET">
+            
+            <div class="form-group">
+                <label for="Age_(yrs)">Age(yrs):</label>
+                <input type="text" required name="Age_(yrs)">
+            </div>
+
+            <div class="form-group">
+                <label for="Weight_(Kg)">Weight(Kg):</label>
+                <input type="text" required name="Weight_(Kg)">
+            </div>
+
+            <div class="form-group">
+                <label for="Height(Cm)">Height(Cm):</label>
+                <input type="text" required name="Height(Cm)">
+            </div>
+
+            <div class="form-group">
+                <label for="BMI">BMI:</label>
+                <input type="text" required name="BMI">
+            </div>
+
+            <div class="form-group">
+                <label for="Blood_Group">Blood Group:</label>
+                <input type="text" required name="Blood_Group">
+            </div>
+
+            <div class="form-group">
+                <label for="Pulse_rate(bpm)">Pulse rate(bpm):</label>
+                <input type="text" required name="Pulse_rate(bpm)">
+            </div>
+
+            <div class="form-group">
+                <label for="RR_(breaths/min)">RR(breaths/min):</label>
+                <input type="text" required name="RR_(breaths/min)">
+            </div>
+
+            <div class="form-group">
+                <label for="Hb(g/dl)">Hb(g/dl):</label>
+                <input type="text" required name="Hb(g/dl)">
+            </div>
+
+            <div class="form-group">
+                <label for="Cycle(R/I)">Cycle(R/I):</label>
+                <input type="text" required name="Cycle(R/I)">
+            </div>
+
+            <div class="form-group">
+                <label for="Cycle_length(days)">Cycle length(days):</label>
+                <input type="text" required name="Cycle_length(days)">
+            </div>
+
+            <div class="form-group">
+                <label for="Marraige_Status_(Yrs)">Marriage Status(Yrs):</label>
+                <input type="text" required name="Marraige_Status_(Yrs)">
+            </div>
+
+            <div class="form-group">
+                <label for="Pregnant(Y/N)">Pregnant(Y/N):</label>
+                <input type="text" required name="Pregnant(Y/N)">
+            </div>
+
+
+            <div class="form-group">
+                <label for="No_of_abortions">No of abortions:</label>
+                <input type="text" required name="No_of_abortions">
+            </div>
+
+            <div class="form-group">
+                <label for="I_beta_HCG(mIU/mL)">I beta HCG(mIU/mL):</label>
+                <input type="text" required name="I_beta_HCG(mIU/mL)">
+            </div>
+
+            <div class="form-group">
+                <label for="II_beta_HCG(mIU/mL)">II beta HCG(mIU/mL):</label>
+                <input type="text" required name="II_beta_HCG(mIU/mL)">
+            </div>
+
+            <div class="form-group">
+                <label for="FSH(mIU/mL)">FSH(mIU/mL):</label>
+                <input type="text" required name="FSH(mIU/mL)">
+            </div>
+
+            <div class="form-group">
+                <label for="LH(mIU/mL)">LH(mIU/mL):</label>
+                <input type="text" required name="LH(mIU/mL)">
+            </div>
+            
+            <div class="form-group">
+                <label for="FSH/LH">FSH/LH:</label>
+                <input type="text" required name="FSH/LH">
+           </div>
+
+            <div class="form-group">
+                <label for="Hip(inch)">Hip(inch):</label>
+                <input type="text" required name="Hip(inch)">
+            </div>
+    <div class="form-group">
+        <label for="Waist(inch)">Waist(inch):</label>
+        <input type="text" required name="Waist(inch)">
+    </div>
+            <div class="form-group">
+                <label for="Waist_Hip_RatioWaist(inch)">Waist Hip Ratio:</label>
+                <input type="text" required name="Waist_Hip_Ratio">
+            </div>
+
+            <div class="form-group">
+                <label for="TSH(mIU/L)">TSH(mIU/L):</label>
+                <input type="text" required name="TSH(mIU/L)">
+            </div>
+
+            <div class="form-group">
+                <label for="PRL(ng/mL)">PRL(ng/mL):</label>
+                <input type="text" required name="PRL(ng/mL)">
+            </div>
+
+            <div class="form-group">
+                <label for="Vit_D3(ng/mL)">Vit_D3(ng/mL):</label>
+                <input type="text" required name="Vit_D3(ng/mL)">
+            </div>
+
+            <div class="form-group">
+                <label for="PRG(ng/mL)">PRG(ng/mL):</label>
+                <input type="text" required name="PRG(ng/mL)">
+            </div>
+
+
+            <div class="form-group">
+                <label for="RBS(mg/dl)">RBS(mg/dl):</label>
+                <input type="text" required name="RBS(mg/dl)">
+            </div>
+
+            <div class="form-group">
+                <label for="Weight_gain(Y/N)">Weight gain(Y/N):</label>
+                <input type="text" required name="Weight_gain(Y/N)">
+            </div>
+    
+            <div class="form-group">
+                <label for="hair_growth(Y/N)">hair growth(Y/N):</label>
+                <input type="text" required name="hair_growth(Y/N)">
+            </div>
+
+            <div class="form-group">
+                <label for="Reg_Exercise(Y/N)">Reg Exercise(Y/N):</label>
+                <input type="text" required name="Reg_Exercise(Y/N)">
+            </div>
+
+            <div class="form-group">
+                <label for="Endometrium(mm)">Endometrium(mm):</label>
+                <input type="text" required name="Endometrium(mm)">
+            </div>
+
+            <div class="form-group">
+                <label for="Skin_darkening(Y/N)">Skin darkening (Y/N):</label>
+                <input type="text" required name="Skin_darkening(Y/N)">
+            </div>
+
+            <div class="form-group">
+                <label for="BP_Diastolic(mmHg)">BP_Diastolic(mmHg):</label>
+                <input type="text" required name="BP_Diastolic(mmHg)">
+            </div>
+
+            <div class="form-group">
+                <label for="Hair_loss(Y/N)">Hair loss(Y/N):</label>
+                <input type="text" required name="Hair_loss(Y/N)">
+            </div>
+           <!-- Add other input fields here -->
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
