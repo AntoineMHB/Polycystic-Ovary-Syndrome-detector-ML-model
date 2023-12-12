@@ -1,0 +1,32 @@
+import pandas as pd
+
+# Assuming the dataset is stored in a CSV file named 'sports_data.csv'
+df = pd.read_csv('sports_data.csv')
+
+# Data Cleaning
+# 1. Replace empty cells in the 'calories' axis with the mean
+mean_calories = df['Calories'].mean()
+df['Calories'].fillna(mean_calories, inplace=True)
+
+# Data Analysis
+# 2. How many people participated in the sports
+num_participants = df.shape[0]
+
+# 3. Standard deviation on the 'Pulse' axis
+std_pulse = df['Pulse'].std()
+
+# 4. Minimum value of the 'Calories' Burned
+min_calories = df['Calories'].min()
+
+# 5. Coefficient correlation value between 'Pulse' and 'Calories'
+corr_pulse_calories = df['Pulse'].corr(df['Calories'])
+
+# 6. Percentile 25 of the 'Maxpulse' axis
+percentile_25_maxpulse = df['Maxpulse'].quantile(0.25)
+
+# Displaying the results
+print(f"Number of people who participated: {num_participants}")
+print(f"Standard deviation of 'Pulse': {std_pulse}")
+print(f"Minimum value of 'Calories': {min_calories}")
+print(f"Coefficient correlation between 'Pulse' and 'Calories': {corr_pulse_calories}")
+print(f"Percentile 25 of 'Maxpulse': {percentile_25_maxpulse}")
